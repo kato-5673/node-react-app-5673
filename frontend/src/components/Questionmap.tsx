@@ -70,4 +70,4 @@ export const Items: typeItems = [
       questionTwo: "",
       questionThree: "",
     },
-  ]
+  ];

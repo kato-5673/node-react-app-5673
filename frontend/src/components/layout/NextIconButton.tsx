@@ -1,16 +1,16 @@
 import { memo, VFC} from "react";
-import { IconButton, Icon } from "@chakra-ui/react"
-import { ChevronRightIcon } from "@chakra-ui/icons"
+import { IconButton, Icon } from "@chakra-ui/react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 type Props = {
   
     onClick?: () => void;
 }
-
-export const NextIconButton : VFC<Props> = memo((props) => {
+// eslint-disable-next-line react/display-name
+export const NextIconButton : VFC<Props> = memo( function nextIconButton(props){
   const {
     onClick
-  } = props  
+  } = props;
 
   return(
     <Icon
@@ -20,6 +20,6 @@ export const NextIconButton : VFC<Props> = memo((props) => {
      variant='outline' 
      icon={<ChevronRightIcon h={[5, 10]} w={[5, 10]} onClick={onClick}/>}>
     </Icon>
-  )
+  );
 });
 

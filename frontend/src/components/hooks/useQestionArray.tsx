@@ -1,7 +1,7 @@
 import { useState,} from "react";
 import { Items } from "../Questionmap";
-import { useAtom } from 'jotai'
-import { ArrayAtom, TotalPoint} from "../jotai/Jotai"
+import { useAtom } from 'jotai';
+import { ArrayAtom, TotalPoint} from "../jotai/Jotai";
 
 
 export const useQuestionArray = () => {  
@@ -12,34 +12,34 @@ export const useQuestionArray = () => {
    
     const ItemsQustion = Items.filter((item) => {      
         return (item.id === count);
-       }) 
+       });
     const onClickCountPlus = () => {
           setCount(count + 1);
           questiondata[count] = Number(value);
           setquestiondata([...questiondata]);
           setValue(String(questiondata[count+1]));
-          }   
+          };   
     const onClickCountMinus = () => {
           questiondata[count] = Number(value);
           setquestiondata([...questiondata]);   
           setCount(count - 1);
-          setValue(String(questiondata[count-1]))
-        }
+          setValue(String(questiondata[count-1]));
+        };
     const Answer = () => {   
-        settotal(total)
+        settotal(total);
         for(let i=0; i < questiondata.length; i++){
             switch (questiondata[i]){
                 case 1:
-                  settotal(total += 1)
+                  settotal(total += 1);
                   break;
                 case 2:
-                  settotal(total += 8)
+                  settotal(total += 8);
                   break;
                 default:
-                  settotal(total += 15)
+                  settotal(total += 15);
               } 
           } 
-      } 
+      };
     return { 
       onClickCountMinus,
       onClickCountPlus, 
@@ -54,4 +54,4 @@ export const useQuestionArray = () => {
       settotal,
       setquestiondata
       };       
-    }
+    };

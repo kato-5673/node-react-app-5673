@@ -1,4 +1,4 @@
-import { useAtom } from "jotai"
+import { useAtom } from "jotai";
 import { AnimebooleanAtom} from "../jotai/Jotai";
 
 export const useFramerAnimetion = () => {
@@ -6,16 +6,16 @@ export const useFramerAnimetion = () => {
 
     const animebooleantrue = () => {
         setanimesetboolen(animeboolean = true);   
-    }
+    };
 
     const animebooleanfalse = () => {
         setanimesetboolen(animeboolean = false);
-    }
+    };
    
     return{
         animeboolean,
         animebooleantrue,
         animebooleanfalse,
-    }
-}
+    };
+};
 

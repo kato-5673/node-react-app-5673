@@ -7,15 +7,15 @@ type Props = {
     count: number
 }
 
-export const FramerNextBackAnimetion : VFC<Props> = memo((props) => {  
+export const FramerNextBackAnimetion : VFC<Props> = memo(function framerNextbackanimetion(props){  
  const {
       children,
       count
-   } = props
+   } = props;
 
  const { 
      animeboolean, 
-   } = useFramerAnimetion()   
+   } = useFramerAnimetion();  
  
  const variants = {
    enter: () => {
@@ -43,5 +43,5 @@ export const FramerNextBackAnimetion : VFC<Props> = memo((props) => {
     > 
     {children}
    </motion.div>       
- )
-})
+ );
+});

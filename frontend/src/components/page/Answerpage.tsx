@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { memo, VFC, useEffect } from "react";
 import { Box, Text, Center} from "@chakra-ui/react";
 import { Header } from "../layout/Header";
@@ -6,7 +5,7 @@ import { useQuestionArray } from "../hooks/useQestionArray";
 import { AnswerItems } from "../Answermap";
 import { useHistory } from 'react-router-dom';
 
-export const Answerpage : VFC = memo(() => {
+export const Answerpage : VFC = memo( function answerpage(){
  const history = useHistory();
  type Answer = 1 | 2 | 3
 
@@ -17,9 +16,9 @@ export const Answerpage : VFC = memo(() => {
  
  useEffect(() => {
   if(total === 0){   
-   history.push('/')
+   history.push('/');
   } 
- },[])
+ },[]);
 
  return(
   <Box>
@@ -34,13 +33,13 @@ export const Answerpage : VFC = memo(() => {
           <Text>{`Q${Items.id}`}.{Items.Answer[questiondata[1]  as Answer ]}</Text> <br/>
           <Text pb={10}>{Items.Answercomment}</Text>
      </Box> 
-      )
+      );
     })
    }
    </Box>   
 
   </Box>
-  )
+  );
 
   
 });

@@ -1,9 +1,9 @@
 import {Route,Switch} from "react-router-dom";
 import { Toppage } from   "../components/page/Toppage";
 import {Questionpage} from "../components/page/Questionpage";
-import {QuestionGraphpage} from "../components/page/QuestionGraphpage"
-import {Contactpage} from "../components/page/Contact"
-import {Answerpage} from "../components/page/Answerpage"
+import {QuestionGraphpage} from "../components/page/QuestionGraphpage";
+import {Contactpage} from "../components/page/Contact";
+import {Answerpage} from "../components/page/Answerpage";
 
 export const Router = () => {
   return(
@@ -24,7 +24,7 @@ export const Router = () => {
          <Answerpage />
       </Route>    
     </Switch>   
-  )
-}
+  );
+};
 
 

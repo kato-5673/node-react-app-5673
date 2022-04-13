@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Router } from "./router/Router";
 import { extendTheme } from "@chakra-ui/react";
 import { CookiesProvider } from "react-cookie";
-import { createBreakpoints } from '@chakra-ui/theme-tools'
+import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 const breakpoints = createBreakpoints({
   sm: '320px',
@@ -11,7 +11,7 @@ const breakpoints = createBreakpoints({
   lg: '960px',
   xl: '1200px',
   '2xl': '1536px',
-})
+});
 
 const theme = extendTheme({
   breakpoints,

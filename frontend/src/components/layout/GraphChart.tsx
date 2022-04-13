@@ -1,7 +1,7 @@
 import {VFC, memo} from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-import {Center, WrapItem, Box} from "@chakra-ui/react"
+import {Center, WrapItem, Box} from "@chakra-ui/react";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -14,12 +14,12 @@ type Props = {
   GraphPercent:number[]
 }
 
-export const GraphChart : VFC<Props> = memo((PropsGraphdata) => {
-  let Persent:number[] = []
+export const GraphChart : VFC<Props> = memo( function graphchart(PropsGraphdata){
+  let Persent:number[] = [];
   if(PropsGraphdata.GraphPercent === undefined){
-    Persent = [0,0,0] 
+    Persent = [0,0,0];
   }else{
-    Persent = PropsGraphdata.GraphPercent
+    Persent = PropsGraphdata.GraphPercent;
   }
 
   const data ={   
@@ -45,7 +45,7 @@ export const GraphChart : VFC<Props> = memo((PropsGraphdata) => {
       borderWidth: 0.1,
     },
   ],
-}
+};
 
 const options = { 
 plugins: { 
@@ -61,8 +61,8 @@ plugins: {
   },
   maintainAspectRatio: false, 
   responsive: false
-}
- const Graphtitle =  PropsGraphdata.Graphtitle
+};
+ const Graphtitle =  PropsGraphdata.Graphtitle;
 
  return (
    

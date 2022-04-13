@@ -1,15 +1,15 @@
 import { memo, VFC} from "react";
-import { IconButton, Icon } from "@chakra-ui/react"
-import { ChevronLeftIcon } from "@chakra-ui/icons"
+import { IconButton, Icon } from "@chakra-ui/react";
+import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 type Props = {
     onClick?: () => void;
 }
 
-export const BackIconButton : VFC<Props> = memo((props) => {
+export const BackIconButton : VFC<Props> = memo( function backiconbutton(props){
   const {
     onClick
-  } = props  
+  } = props; 
 
   return(
     <Icon
@@ -19,5 +19,5 @@ export const BackIconButton : VFC<Props> = memo((props) => {
      variant='outline' 
      icon={<ChevronLeftIcon h={[5, 10]} w={[5, 10]} onClick={onClick}/>}>
     </Icon>
-  )
+  );
 });

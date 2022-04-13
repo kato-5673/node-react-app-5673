@@ -1,16 +1,16 @@
 import { memo, VFC, ReactNode } from "react";
-import { Button } from "@chakra-ui/react"
+import { Button } from "@chakra-ui/react";
 
 type Props = {
     children: ReactNode;
     onClick?: () => void;
 }
 
-export const SettingButton : VFC<Props> = memo((props) => {
+export const SettingButton : VFC<Props> = memo( function settingbutton(props){
   const {
     children,
     onClick
-  } = props  
+  } = props; 
 
   return(
     <Button
@@ -26,6 +26,6 @@ export const SettingButton : VFC<Props> = memo((props) => {
       >
         {children}
     </Button>
-  )
+  );
 });
 

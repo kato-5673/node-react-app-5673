@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Flex, Box, Center, Text, Radio,RadioGroup, Stack} from "@chakra-ui/react";
 import { memo, VFC, useEffect} from "react";
 import { Header } from "../layout/Header";
@@ -12,19 +11,19 @@ import {useFramerAnimetion} from "../hooks/useFremerAnimetion";
 import {FramerNextBackAnimetion} from "../layout/FarmerNextBackAnimetion";
 
 
-export const Questionpage : VFC = memo(() => {
+export const Questionpage : VFC = memo( function questionpage() {
    const history = useHistory();
 
     const {
       animebooleantrue,
       animebooleanfalse,
-    } = useFramerAnimetion()
+    } = useFramerAnimetion();
 
     const {
       cookies,
       setCookieaction,    
       setdffaultCookieaction  
-    } = useCookie() 
+    } = useCookie();
    
     const {
       QuestionArraypost,
@@ -53,40 +52,32 @@ export const Questionpage : VFC = memo(() => {
 
       if(total !== 0){
         settotal(0);
-        setquestiondata([1,1,1,1,1,1,1,1])
+        setquestiondata([1,1,1,1,1,1,1,1]);
       } 
-    },[])
+    },[]);
 
     const PulsOrCookieOrNextpageAndAnimetionClick = () => {
        switch (count){
         case 7:
           history.push('/answer');
-          console.log("配列のデータ "+ questiondata);
-          console.log("トータル計算" + total);
-          console.log("カウント" + count)
-          onClickCountPlus()
-          animebooleantrue()
-          Answer()
+          onClickCountPlus();
+          animebooleantrue();
+          Answer();
           if(111 === Number(cookies.name)){
-           console.log("111 send!!");
            QuestionArraypost(questiondata);
            setCookieaction();
-          } else{
-          console.log("777 not send!!");    
-         }
-        break
+          } 
+        break;
         default:
-          onClickCountPlus()
-          animebooleantrue()
-          console.log("配列のデータ "+ questiondata);
-          console.log("トータル計算" + total);
+          onClickCountPlus();
+          animebooleantrue();
       }
-    }
+    };
 
     const MinsAndAnimetiononClick = () => {
-      onClickCountMinus()
-      animebooleanfalse()
-    }
+      onClickCountMinus();
+      animebooleanfalse();
+    };
 
   return(
    <Box >
@@ -119,11 +110,11 @@ export const Questionpage : VFC = memo(() => {
           </Flex>  
          </Flex> 
         </Box>         
-        )
+        );
       })}
       </FramerNextBackAnimetion>
      </Center>
    </Box>
-  )
+  );
 });
 

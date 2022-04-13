@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const useQuestionAxios  = () => {
  const [getQuestionJson, setQuestionJson] = useState<number[][]>([]);
- const [StateQuestionArrayPersent, setStateQuestionArrayPersent] = useState<number[][]>([])
+ const [StateQuestionArrayPersent, setStateQuestionArrayPersent] = useState<number[][]>([]);
    
  const AxiosQuestionArrayget = useCallback(() => {  
     axios.get('http://localhost:8080/api')
@@ -29,8 +29,8 @@ export const useQuestionAxios  = () => {
          Seven[n] = res.data[`${6+i}`]; 
          Eight[n] = res.data[`${7+i}`];
       }
-      const numbers:number[][] = [One, Two, Three, Four, Five, Six, Seven, Eight]
-      setQuestionJson(numbers)
+      const numbers:number[][] = [One, Two, Three, Four, Five, Six, Seven, Eight];
+      setQuestionJson(numbers);
 
       let PersentArray:number[][] = []; 
       for(let i=0; i<numbers.length; i++){
@@ -40,32 +40,32 @@ export const useQuestionAxios  = () => {
         const ArrayThreePersent = numbers[i][2] / TottalPaersent * 100;
         PersentArray.push([ArrayOnePersent, ArrayTwoPersent, ArrayThreePersent]);
       }
-     const Persents:number[][] = PersentArray
-      setStateQuestionArrayPersent(Persents)
-     }).catch(err => { console.log('err:', err); });;
-   },[])
+     const Persents:number[][] = PersentArray;
+      setStateQuestionArrayPersent(Persents);
+     }).catch(err => { console.log('err:', err); });
+   },[]);
   type Props = number[]
  
  const QuestionArraypost = (questiondata:Props) => {  
   let QuestionJson:any ={
      "one":0, "two":0, "three":0, "four":0, "five":0, "six":0, "seven":0, "eight":0
-  }
-  const Jsonname =["one", "two", "three", "four", "five", "six", "seven", "eight"]
+  };
+  const Jsonname =["one", "two", "three", "four", "five", "six", "seven", "eight"];
   for(let i=0; i < questiondata.length; i++){
       QuestionJson[Jsonname[i]] = questiondata[i];
     }
-  console.log(QuestionJson)
+  console.log(QuestionJson);
   axios.post('http://localhost:8080/api',{QuestionJson})
     .then(res => {
       console.log(res);
       console.log(res.data);
     });
-   }
+   };
 
    return{
      QuestionArraypost,
      AxiosQuestionArrayget,
      getQuestionJson,
      StateQuestionArrayPersent
-   }
+   };
   };

@@ -1,10 +1,10 @@
 import { memo, VFC, useEffect} from "react";
-import { GraphChart, } from "../layout/GraphChart"
-import { Box, Wrap} from "@chakra-ui/react"
+import { GraphChart, } from "../layout/GraphChart";
+import { Box, Wrap} from "@chakra-ui/react";
 import { Header } from "../layout/Header";
 import { useQuestionAxios } from "../hooks/useQuestionAxios";
-
-export const QuestionGraphpage : VFC = memo(() => {
+// eslint-disable-next-line react/display-name
+export const QuestionGraphpage : VFC = memo( function questionGraphpage() {
   const {
     AxiosQuestionArrayget,
     getQuestionJson,
@@ -13,8 +13,8 @@ export const QuestionGraphpage : VFC = memo(() => {
 
   
   useEffect (() => {  
-    AxiosQuestionArrayget()
-  },[])
+    AxiosQuestionArrayget();
+  },[]);
   
 return(
  <Box>
@@ -87,5 +87,5 @@ return(
   </Wrap>
   </Box>
  </Box>
-)  
+); 
 });

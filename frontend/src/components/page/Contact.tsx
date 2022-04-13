@@ -3,7 +3,7 @@ import { Center, Box, Text } from "@chakra-ui/react";
 import { Header } from "../layout/Header";
 
 
-export const Contactpage : VFC = memo(() => {
+export const Contactpage : VFC = memo( function ontactpage(){
   return(
     <Box>
      <Header></Header>
@@ -16,6 +16,6 @@ export const Contactpage : VFC = memo(() => {
      </Center>
      <Box/>
     </Box>
-  )
+  );
 });
 

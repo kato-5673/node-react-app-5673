@@ -1,11 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { memo, VFC, useCallback } from "react";
 import { Center, Box, Text,Button } from "@chakra-ui/react";
 import { useHistory } from 'react-router-dom';
 import { Header } from "../layout/Header";
 
 
-export const Toppage : VFC = memo(() => {
+export const Toppage : VFC = memo(function toppage() {
   const history = useHistory();
   const onClickQuestionpage = useCallback(() => history.push('/question'), []);
   
@@ -31,6 +30,6 @@ export const Toppage : VFC = memo(() => {
      </Center>
      <Box/>
     </Box>
-  )
+  );
 });
 

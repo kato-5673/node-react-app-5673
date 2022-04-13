@@ -24,5 +24,6 @@ module.exports = {
         "no-unexpected-multiline": "error",
         "no-unreachable": "error",
         'react/react-in-jsx-scope': 'off',
+        "react/prop-types": "off",
     }
 };

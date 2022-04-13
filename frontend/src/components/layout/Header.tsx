@@ -1,15 +1,14 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Flex, Box, Heading, Link, Menu, MenuButton, IconButton, Spacer, MenuList, MenuItem } from "@chakra-ui/react";
 import { HamburgerIcon,  } from '@chakra-ui/icons';
 import { memo, VFC, useCallback } from "react";
 import { useHistory } from 'react-router-dom';
 
-export const Header : VFC = memo(() => {
+export const Header : VFC = memo( function header(){
   const history = useHistory();
-  const onClickToppage = useCallback(() => history.push('/'),[])
-  const onClickquestionpage = useCallback(() => history.push('/question'),[])
-  const onClickquestiongraphpage = useCallback(() => history.push('/questiongraph'),[])
-  const onClickContactpage = useCallback(() => history.push('/contact'),[])
+  const onClickToppage = useCallback(() => history.push('/'),[]);
+  const onClickquestionpage = useCallback(() => history.push('/question'),[]);
+  const onClickquestiongraphpage = useCallback(() => history.push('/questiongraph'),[]);
+  const onClickContactpage = useCallback(() => history.push('/contact'),[]);
   
   return(
     <Flex  padding={{ base: 3, md: 7 }}>
@@ -54,6 +53,6 @@ export const Header : VFC = memo(() => {
          </MenuList>
       </Menu> 
       </Flex>
-  )
+  );
 });
 
