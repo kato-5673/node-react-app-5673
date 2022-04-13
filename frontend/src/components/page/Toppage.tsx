@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Header } from "../layout/Header";
 
 
-export const Toppage : VFC = memo(function toppage() {
+export const Toppage : VFC = memo(function EStoppage() {
   const history = useHistory();
   const onClickQuestionpage = useCallback(() => history.push('/question'), []);
   

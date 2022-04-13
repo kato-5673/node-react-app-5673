@@ -5,7 +5,7 @@ import { useQuestionArray } from "../hooks/useQestionArray";
 import { AnswerItems } from "../Answermap";
 import { useHistory } from 'react-router-dom';
 
-export const Answerpage : VFC = memo( function answerpage(){
+export const Answerpage : VFC = memo( function ESanswerpage(){
  const history = useHistory();
  type Answer = 1 | 2 | 3
 

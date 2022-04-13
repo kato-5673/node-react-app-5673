@@ -7,7 +7,7 @@ type Props = {
     onClick?: () => void;
 }
 // eslint-disable-next-line react/display-name
-export const NextIconButton : VFC<Props> = memo( function nextIconButton(props){
+export const NextIconButton : VFC<Props> = memo( function ESnextIconButton(props){
   const {
     onClick
   } = props;

@@ -6,7 +6,7 @@ type Props = {
     onClick?: () => void;
 }
 
-export const SettingButton : VFC<Props> = memo( function settingbutton(props){
+export const SettingButton : VFC<Props> = memo( function ESsettingbutton(props){
   const {
     children,
     onClick

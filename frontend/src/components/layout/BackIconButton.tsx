@@ -6,7 +6,7 @@ type Props = {
     onClick?: () => void;
 }
 
-export const BackIconButton : VFC<Props> = memo( function backiconbutton(props){
+export const BackIconButton : VFC<Props> = memo( function ESbackiconbutton(props){
   const {
     onClick
   } = props; 

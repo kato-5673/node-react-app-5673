@@ -7,7 +7,7 @@ type Props = {
     count: number
 }
 
-export const FramerNextBackAnimetion : VFC<Props> = memo(function framerNextbackanimetion(props){  
+export const FramerNextBackAnimetion : VFC<Props> = memo(function ESframerNextbackanimetion(props){  
  const {
       children,
       count

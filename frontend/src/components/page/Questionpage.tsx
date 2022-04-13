@@ -11,7 +11,7 @@ import {useFramerAnimetion} from "../hooks/useFremerAnimetion";
 import {FramerNextBackAnimetion} from "../layout/FarmerNextBackAnimetion";
 
 
-export const Questionpage : VFC = memo( function questionpage() {
+export const Questionpage : VFC = memo( function ESquestionpage() {
    const history = useHistory();
 
     const {

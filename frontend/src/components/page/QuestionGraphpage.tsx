@@ -4,7 +4,7 @@ import { Box, Wrap} from "@chakra-ui/react";
 import { Header } from "../layout/Header";
 import { useQuestionAxios } from "../hooks/useQuestionAxios";
 // eslint-disable-next-line react/display-name
-export const QuestionGraphpage : VFC = memo( function questionGraphpage() {
+export const QuestionGraphpage : VFC = memo( function ESquestionGraphpage() {
   const {
     AxiosQuestionArrayget,
     getQuestionJson,

@@ -3,7 +3,7 @@ import { Center, Box, Text } from "@chakra-ui/react";
 import { Header } from "../layout/Header";
 
 
-export const Contactpage : VFC = memo( function ontactpage(){
+export const Contactpage : VFC = memo( function ESontactpage(){
   return(
     <Box>
      <Header></Header>

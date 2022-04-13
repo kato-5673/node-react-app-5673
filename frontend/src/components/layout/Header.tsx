@@ -3,7 +3,7 @@ import { HamburgerIcon,  } from '@chakra-ui/icons';
 import { memo, VFC, useCallback } from "react";
 import { useHistory } from 'react-router-dom';
 
-export const Header : VFC = memo( function header(){
+export const Header : VFC = memo( function ESheader(){
   const history = useHistory();
   const onClickToppage = useCallback(() => history.push('/'),[]);
   const onClickquestionpage = useCallback(() => history.push('/question'),[]);

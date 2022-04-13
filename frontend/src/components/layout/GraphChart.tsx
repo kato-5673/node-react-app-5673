@@ -14,7 +14,7 @@ type Props = {
   GraphPercent:number[]
 }
 
-export const GraphChart : VFC<Props> = memo( function graphchart(PropsGraphdata){
+export const GraphChart : VFC<Props> = memo( function ESgraphchart(PropsGraphdata){
   let Persent:number[] = [];
   if(PropsGraphdata.GraphPercent === undefined){
     Persent = [0,0,0];
