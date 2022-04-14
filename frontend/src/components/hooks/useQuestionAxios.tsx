@@ -10,26 +10,35 @@ export const useQuestionAxios  = () => {
     axios.get('http://localhost:8080/api')
     .then(res => {
       let n = -1;
-      let One = [1,1,1];
-      let Two = [1,1,1];
-      let Three = [1,1,1];
-      let Four = [1,1,1];
-      let Five = [1,1,1];
-      let Six = [1,1,1];
-      let Seven = [1,1,1];
-      let Eight = [1,1,1];
+      let OneVegetable = [1,1,1];
+      let TwoProcessedFood = [1,1,1];
+      let ThreeMotion = [1,1,1];
+      let FourSleep = [1,1,1];
+      let FiveObesity = [1,1,1];
+      let SixAlcohol = [1,1,1];
+      let SevenTobacco = [1,1,1];
+      let EightCondition = [1,1,1];
       for(let i=0; i<17; i+=8){ 
        n++;
-         One[n] = res.data[`${0+i}`];
-         Two[n] = res.data[`${1+i}`];
-         Three[n] = res.data[`${2+i}`]; 
-         Four[n] = res.data[`${3+i}`]; 
-         Five[n] = res.data[`${4+i}`]; 
-         Six[n] =  res.data[`${5+i}`]; 
-         Seven[n] = res.data[`${6+i}`]; 
-         Eight[n] = res.data[`${7+i}`];
+         OneVegetable[n] = res.data[`${0+i}`];
+         TwoProcessedFood[n] = res.data[`${1+i}`];
+         ThreeMotion[n] = res.data[`${2+i}`]; 
+         FourSleep[n] = res.data[`${3+i}`]; 
+         FiveObesity[n] = res.data[`${4+i}`]; 
+         SixAlcohol[n] =  res.data[`${5+i}`]; 
+         SevenTobacco[n] = res.data[`${6+i}`]; 
+         EightCondition[n] = res.data[`${7+i}`];
       }
-      const numbers:number[][] = [One, Two, Three, Four, Five, Six, Seven, Eight];
+      const numbers:number[][] = [
+          OneVegetable, 
+          TwoProcessedFood, 
+          ThreeMotion,
+          FourSleep, 
+          FiveObesity,
+          SixAlcohol,
+          SevenTobacco, 
+          EightCondition
+        ];
       setQuestionJson(numbers);
 
       let PersentArray:number[][] = []; 
@@ -48,9 +57,25 @@ export const useQuestionAxios  = () => {
  
  const QuestionArraypost = (questiondata:Props) => {  
   let QuestionJson:any ={
-     "one":0, "two":0, "three":0, "four":0, "five":0, "six":0, "seven":0, "eight":0
+     "OneVegetable":0, 
+     "TwoProcessedFood":0, 
+     "ThreeMotion":0,
+     "FourSleep":0, 
+     "FiveObesity ":0, 
+     "SixAlcohol":0, 
+     "SevenTobacco":0,
+     "EightCondition":0
   };
-  const Jsonname =["one", "two", "three", "four", "five", "six", "seven", "eight"];
+  const Jsonname =[
+     "OneVegetable", 
+     "TwoProcessedFood", 
+     "ThreeMotion", 
+     "FourSleep", 
+     "FiveObesity ", 
+     "SixAlcohol", 
+     "SevenTobacco",
+     "EightCondition"
+    ];
   for(let i=0; i < questiondata.length; i++){
       QuestionJson[Jsonname[i]] = questiondata[i];
     }
