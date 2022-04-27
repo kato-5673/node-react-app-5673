@@ -9,14 +9,14 @@ https://user-images.githubusercontent.com/87408493/165439176-3f8e9eb7-74d6-4915-
 typescript     
 node.js    
 heroku    　
-mongoDB   
+mongoDB     
 React.js  
 
 # 主な使用ライブラリ
 uiコンポーネント：　chakra-ui  
 状態管理：　jotai  
 HTTP: axios  
-リンダー： eslint  
+linter： eslint  
 ルーティング：　react-router-dom  
 
 # 機能一覧
