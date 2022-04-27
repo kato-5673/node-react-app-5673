@@ -6,11 +6,11 @@
 https://user-images.githubusercontent.com/87408493/165439176-3f8e9eb7-74d6-4915-ba43-a7562c2a71b2.mp4
 
 # 使用技術
-typescript, 
-node.js,
-heroku, 
-mongoDB,
-React.js
+*typescript, 
+*node.js,
+*heroku, 
+*mongoDB,
+*React.js
 
 # 主な使用ライブラリ
 uiコンポーネント：　chakra-ui,
