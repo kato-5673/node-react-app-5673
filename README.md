@@ -13,7 +13,7 @@ mongoDB,
 React.js
 
 # 主な使用ライブラリ
-・uiコンポーネント：　chakra-ui,
+uiコンポーネント：　chakra-ui,
 状態管理：　jotai,
 HTTP: axios,
 リンダー： eslint,
