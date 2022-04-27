@@ -12,13 +12,13 @@ heroku,
 mongoDB,
 React.js
 
-#主な使用ライブラリ
-uiコンポーネント：　chakra-ui,
+# 主な使用ライブラリ
+・uiコンポーネント：　chakra-ui,
 状態管理：　jotai,
 HTTP: axios,
 リンダー： eslint,
 ルーティング：　react-router-dom,
 
-#機能一覧
+# 機能一覧
 統計機能,
 採点機能,
