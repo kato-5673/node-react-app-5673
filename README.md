@@ -18,6 +18,7 @@ https://user-images.githubusercontent.com/87408493/165439176-3f8e9eb7-74d6-4915-
 * HTTP: axios  
 * linter: eslint  
 * ルーティング: react-router-dom  
+* DB: Mongoose
 
 # 機能一覧
 * 統計機能  
